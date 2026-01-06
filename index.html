@@ -5,8 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Referee AI - Impartial Decision Steering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              kiro: {
+                black: '#000000',
+                white: '#FFFFFF',
+                accent: '#000000',
+                slate: '#F8F9FA'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
 {
   "imports": {
     "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
@@ -16,8 +38,31 @@
   }
 }
 </script>
-</head>
-  <body class="bg-slate-50 text-slate-900 min-h-screen">
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #F8F9FA;
+      }
+      .kiro-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+        border-radius: 24px;
+      }
+      .kiro-input {
+        background: #F8F9FA;
+        border: 1.5px solid transparent;
+        transition: all 0.2s ease;
+      }
+      .kiro-input:focus {
+        background: white;
+        border-color: black;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
+      }
+    </style>
+  </head>
+  <body class="text-slate-900 min-h-screen">
     <div id="root"></div>
   </body>
 </html>
