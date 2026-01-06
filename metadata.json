@@ -1,0 +1,5 @@
+{
+  "name": "Referee AI",
+  "description": "An impartial decision-steering agent that helps navigate complex choices by comparing options, explaining trade-offs, and providing conditional recommendations based on user priorities.",
+  "requestFramePermissions": []
+}
